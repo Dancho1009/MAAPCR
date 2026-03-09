@@ -1,0 +1,150 @@
+{
+    "$__mpe_config_新建Pipeline7": {
+        "$__mpe_code": {
+            "filename": "新建Pipeline7",
+            "prefix": "",
+            "savedViewport": {
+                "x": 686,
+                "y": -127,
+                "zoom": 0.43
+            },
+            "version": "v1.2.3"
+        }
+    },
+    "主页检测": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 995
+            }
+        },
+        "next": [
+            "登录结束"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    10,
+                    604,
+                    1248,
+                    112
+                ],
+                "template": [
+                    "主页.png",
+                    "主页2.png"
+                ],
+                "threshold": [
+                    0.7,
+                    0.7
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "开始登陆": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 718
+            }
+        },
+        "next": [
+            "[JumpBack]点击公告",
+            "主页检测",
+            "[JumpBack]点击网络错误",
+            "[JumpBack]点击中央"
+        ],
+        "rate_limit": 400,
+        "timeout": -1
+    },
+    "点击中央": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 717
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    640,
+                    360,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "post_delay": 600
+    },
+    "点击公告": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 354
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    629,
+                    640,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "post_delay": 700,
+        "recognition": {
+            "param": {
+                "template": [
+                    "公告.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "点击网络错误": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1312
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    506,
+                    471,
+                    263,
+                    47
+                ]
+            },
+            "type": "Click"
+        },
+        "post_delay": 800,
+        "recognition": {
+            "param": {
+                "template": [
+                    "网络错误.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "登录结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1060
+            }
+        }
+    }
+}
