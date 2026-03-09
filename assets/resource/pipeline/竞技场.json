@@ -1,0 +1,783 @@
+{
+    "$__mpe_config_新建Pipeline3": {
+        "$__mpe_code": {
+            "filePath": "D:\\Study\\code\\MAAPCR\\MAAPCR\\assets\\resource\\pipeline\\竞技场.json",
+            "filename": "新建Pipeline7",
+            "isModifiedExternally": false,
+            "lastSyncTime": 1773017414365,
+            "prefix": "",
+            "savedViewport": {
+                "x": -602,
+                "y": -1326,
+                "zoom": 1.5
+            },
+            "version": "v1.2.3"
+        }
+    },
+    "公主竞技场：下一步": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1988
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "on_error": [
+            "公主竞技场：下一步"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "下一步.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": -1
+    },
+    "公主竞技场：回主页结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 1937
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "on_error": [
+            "[JumpBack]公主竞技场：回主页结束"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "主页.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：战斗结果轮询": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "公主竞技场：下一步",
+            "公主竞技场：跳过战斗检测",
+            "公主竞技场：继续等待结果"
+        ],
+        "rate_limit": 600,
+        "timeout": -1
+    },
+    "公主竞技场：挑战上限后点击空白": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 1970
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    105,
+                    400,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：回主页结束"
+        ],
+        "post_delay": 950
+    },
+    "公主竞技场：挑战次数上限判断": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 2158
+            }
+        },
+        "next": [
+            "公主竞技场：挑战上限后点击空白"
+        ],
+        "on_error": [
+            "公主竞技场：队伍编成页面判断"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "挑战次数上限.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1000
+    },
+    "公主竞技场：点击任务按钮": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1327
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击公主竞技场"
+        ],
+        "on_error": [
+            "竞技场流：回主页"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "任务.png",
+                    "任务2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：点击公主竞技场": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1393
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击空白处取消弹窗"
+        ],
+        "on_error": [
+            "公主竞技场：点击任务按钮"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "公主竞技场.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：点击战斗开始": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 2328
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：进入战斗等待"
+        ],
+        "on_error": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "战斗开始.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：点击空白处取消弹窗": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1686
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    15,
+                    380,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "post_delay": 950
+    },
+    "公主竞技场：点击第一个对手": {
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 2310
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    525,
+                    160,
+                    701,
+                    141
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：挑战次数上限判断",
+            "公主竞技场：队伍编成页面判断",
+            "公主竞技场：第一个对手兜底重试"
+        ],
+        "post_delay": 950
+    },
+    "公主竞技场：点击队伍2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 2453
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击队伍3"
+        ],
+        "on_error": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "队伍2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：点击队伍3": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 2468
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击战斗开始"
+        ],
+        "on_error": [
+            "公主竞技场：点击队伍2"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "队伍3.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "公主竞技场：第一个对手兜底重试": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "rate_limit": 300,
+        "timeout": 10000
+    },
+    "公主竞技场：继续等待结果": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "公主竞技场：战斗结果轮询"
+        ],
+        "post_delay": 800,
+        "timeout": 10000
+    },
+    "公主竞技场：跳过战斗检测": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 2013
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    1220,
+                    455,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：战斗结果轮询"
+        ],
+        "on_error": [
+            "公主竞技场：战斗结果轮询"
+        ],
+        "post_delay": 700,
+        "recognition": {
+            "param": {
+                "template": [
+                    "竞技场跳过战斗.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1200
+    },
+    "公主竞技场：进入战斗等待": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "公主竞技场：战斗结果轮询"
+        ],
+        "post_delay": 2000,
+        "timeout": 10000
+    },
+    "公主竞技场：队伍编成页面判断": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 2272
+            }
+        },
+        "next": [
+            "公主竞技场：点击队伍2"
+        ],
+        "on_error": [
+            "公主竞技场：点击第一个对手"
+        ],
+        "rate_limit": 800,
+        "recognition": {
+            "param": {
+                "template": [
+                    "竞技场队伍编成.png",
+                    "竞技场队伍编成2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1000
+    },
+    "普通竞技场：下一步": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 384
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：点击第一个对手"
+        ],
+        "on_error": [
+            "普通竞技场：下一步"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "下一步.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": -1
+    },
+    "普通竞技场：战斗结果轮询": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "普通竞技场：下一步",
+            "普通竞技场：跳过战斗检测",
+            "普通竞技场：继续等待结果"
+        ],
+        "rate_limit": 600,
+        "timeout": -1
+    },
+    "普通竞技场：挑战上限后点击空白": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1101
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    105,
+                    400,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "公主竞技场：点击任务按钮"
+        ],
+        "post_delay": 950
+    },
+    "普通竞技场：挑战次数上限判断": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 581
+            }
+        },
+        "next": [
+            "普通竞技场：挑战上限后点击空白"
+        ],
+        "on_error": [
+            "普通竞技场：队伍编成页面判断"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "挑战次数上限.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1000
+    },
+    "普通竞技场：点击任务按钮": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 968
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：点击竞技场"
+        ],
+        "on_error": [
+            "竞技场流：回主页"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "任务.png",
+                    "任务2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "普通竞技场：点击战斗开始": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 12
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：进入战斗等待"
+        ],
+        "on_error": [
+            "普通竞技场：点击第一个对手"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "战斗开始.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "普通竞技场：点击空白处取消弹窗": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 676
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    15,
+                    380,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：点击第一个对手"
+        ],
+        "post_delay": 950
+    },
+    "普通竞技场：点击竞技场": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 725
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：点击空白处取消弹窗"
+        ],
+        "on_error": [
+            "普通竞技场：点击任务按钮"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "template": [
+                    "竞技场.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    },
+    "普通竞技场：点击第一个对手": {
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 443
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    525,
+                    160,
+                    701,
+                    141
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：挑战次数上限判断",
+            "普通竞技场：队伍编成页面判断",
+            "普通竞技场：第一个对手兜底重试"
+        ],
+        "post_delay": 950
+    },
+    "普通竞技场：第一个对手兜底重试": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "普通竞技场：点击第一个对手"
+        ],
+        "rate_limit": 300,
+        "timeout": 10000
+    },
+    "普通竞技场：继续等待结果": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "普通竞技场：战斗结果轮询"
+        ],
+        "post_delay": 800,
+        "timeout": 10000
+    },
+    "普通竞技场：跳过战斗检测": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 323
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    1220,
+                    455,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：战斗结果轮询"
+        ],
+        "on_error": [
+            "普通竞技场：战斗结果轮询"
+        ],
+        "post_delay": 700,
+        "recognition": {
+            "param": {
+                "template": [
+                    "竞技场跳过战斗.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1200
+    },
+    "普通竞技场：进入战斗等待": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "普通竞技场：战斗结果轮询"
+        ],
+        "post_delay": 2000,
+        "timeout": 10000
+    },
+    "普通竞技场：队伍编成页面判断": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 407
+            }
+        },
+        "next": [
+            "普通竞技场：点击战斗开始"
+        ],
+        "on_error": [
+            "普通竞技场：点击第一个对手"
+        ],
+        "rate_limit": 800,
+        "recognition": {
+            "param": {
+                "template": [
+                    "竞技场队伍编成.png",
+                    "竞技场队伍编成2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 1000
+    },
+    "竞技场流：回主页": {
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 1006
+            }
+        },
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "next": [
+            "普通竞技场：点击任务按钮"
+        ],
+        "on_error": [
+            "[JumpBack]竞技场流：回主页"
+        ],
+        "post_delay": 950,
+        "recognition": {
+            "param": {
+                "roi": [
+                    27,
+                    617,
+                    1239,
+                    100
+                ],
+                "template": [
+                    "主页.png",
+                    "主页2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "timeout": 10000
+    }
+}
